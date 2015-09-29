@@ -1,14 +1,19 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>GreasySpoon</title>
+  <title>TheGreasySpoon</title>
   <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
+  <ul>
+    <li><%= link_to "About", main_about_path %></li>
+    <li><%= link_to "Contact", main_contact_path %></li>
+  </ul>
 
 <%= yield %>
 
+<p>Copyright Ryan Haase</p>
 </body>
 </html>
