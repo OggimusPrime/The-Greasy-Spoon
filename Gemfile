@@ -13,6 +13,7 @@ gem 'bootstrap-sass'
 gem 'carrierwave'
 gem 'fog'
 gem 'figaro'
+gem 'mini_magick'
 
 group :development, :test do
   gem 'byebug'
