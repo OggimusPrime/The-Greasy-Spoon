@@ -16,12 +16,33 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
-.jumbotron {
-  background-color: #f7f7f7;
-  // border: 1px solid #f5f6f6;
-}
+ .jumbotron {
+   background-color: #f7f7f7;
+ }
 
-.jumbotron > h2, .jumbotron > h3 {
-  color: #727272;
-  font-weight: bold;
-}
+ .jumbotron > h2, .jumbotron > h3 {
+   color: #727272;
+   font-weight: bold;
+ }
+
+ .navbar {
+   background-color: #60ab59;
+   padding: 10px 0;
+ }
+
+ .navbar-default .navbar-nav > li > a {
+   color: #ffffff;
+   font-size: 16px;
+   font-weight: bold;
+ }
+
+ .navbar-default .navbar-brand {
+   color: #ffffff;
+   font-size: 30px;
+   font-weight: bold;
+   font-family: Papyrus, fantasy;
+ }
+
+ .navbar-toggle {
+   background-color: #f7f7f7;
+ }
