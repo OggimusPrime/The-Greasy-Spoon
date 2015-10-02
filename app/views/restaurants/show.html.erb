@@ -19,6 +19,7 @@
   <%= link_to @restaurant.website, @restaurant.website %>
 </p>
 
+<%= link_to "Write Review", new_restaurant_review_path(@restaurant), class: "btn btn-primary" %><br>
 <%= link_to 'Edit', edit_restaurant_path(@restaurant), class: "btn btn-link" %>
 |
 <%= link_to 'Back', restaurants_path, class: "btn btn-link" %>
