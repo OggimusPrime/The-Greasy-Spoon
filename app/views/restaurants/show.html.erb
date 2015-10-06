@@ -46,7 +46,7 @@
             <p><%= review.created_at.strftime("%-m/%-d/%-y") %></p>
             <% if user_signed_in? %>
               <% if (review.user == current_user) || (current_user.admin?) %>
-                <%= link_to "Edit", edit_restaurant_path(@restaurant, review) %> | 
+                <%= link_to "Edit", edit_restaurant_path(@restaurant, review) %> |
                 <%= link_to "Delete", restaurant_review_path(@restaurant, review), method: :delete %>
               <% end %>
             <% end %>

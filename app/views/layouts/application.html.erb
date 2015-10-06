@@ -29,13 +29,12 @@
     <% end %>
   </div>
 
-    <div class="container">
-      <%= yield %>
-    </div>
-
-    <div class="container">
-      <%= render 'layouts/footer' %>
-    </div>
+  <div id="body" class="container">
+    <%= yield %>
   </div>
+
+  <footer>
+    <%= render 'layouts/footer' %>
+  </footer>
 </body>
 </html>

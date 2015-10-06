@@ -46,8 +46,33 @@
  .navbar-toggle {
    background-color: #f7f7f7;
  }
+ body {
+  position: relative;
+  margin: 0;
+  padding-bottom: 10rem;
+  min-height: 100%;
+ }
 
- .footer > .row > p {
+ html {
+   height: 100%;
+   box-sizing: border-box;
+ }
+
+ *,
+ *::before,
+ *:after {
+   box-sizing: inherit;
+ }
+ 
+ footer {
+   position: absolute;
+   bottom: 0px;
+   left: 0px;
+   right: 0px;
+   padding: 1px;
+ }
+
+ footer > .row > p {
    text-align: center;
  }
 
@@ -61,4 +86,12 @@
    z-index: 10;
    width: 100%;
    margin: -20px 0 0 0;
+ }
+
+ .star-rating {
+   margin: 10px 0;
+ }
+
+ table > .restaurants > tr > td {
+   vertical-align: middle;
  }

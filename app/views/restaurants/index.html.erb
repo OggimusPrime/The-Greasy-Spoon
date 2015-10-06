@@ -15,13 +15,13 @@
     </tr>
   </thead>
 
-  <tbody>
+  <tbody class="restaurants">
     <% @restaurants.each do |restaurant| %>
       <tr>
-        <td><%= link_to restaurant.name, restaurant %></td>
+        <td><%= link_to restaurant.name, restaurant, class: "btn btn-link" %></td>
         <td><%= restaurant.address %></td>
         <td><%= restaurant.phone %></td>
-        <td><%= link_to restaurant.website, restaurant.website %></td>
+        <td><%= link_to restaurant.website, restaurant.website, class: "btn btn-link" %></td>
         <% if user_signed_in? && current_user.admin? %>
           <td><%= link_to 'Edit', edit_restaurant_path(restaurant), class: "btn btn-link" %></td>
           <td><%= link_to 'Destroy', restaurant, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-link" %></td>
@@ -31,7 +31,6 @@
   </tbody>
 </table>
 
-<br>
 <% if user_signed_in? && current_user.admin? %>
   <%= link_to 'New Restaurant', new_restaurant_path, class: "btn btn-link" %>
 <% end %>
