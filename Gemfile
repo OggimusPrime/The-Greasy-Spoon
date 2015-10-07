@@ -17,6 +17,8 @@ gem 'mini_magick'
 gem 'devise'
 gem 'faker'
 gem 'searchkick'
+gem 'will_paginate', '~>3.0.6'
+gem 'will_paginate-bootstrap'
 
 group :development, :test do
   gem 'byebug'

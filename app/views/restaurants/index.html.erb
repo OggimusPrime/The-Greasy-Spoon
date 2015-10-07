@@ -31,6 +31,8 @@
   </tbody>
 </table>
 
+<%= will_paginate @restaurants, renderer: BootstrapPagination::Rails %>
+<br>
 <% if user_signed_in? && current_user.admin? %>
   <%= link_to 'New Restaurant', new_restaurant_path, class: "btn btn-link" %>
 <% end %>

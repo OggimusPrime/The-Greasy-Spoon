@@ -4,7 +4,7 @@ class RestaurantsController < ApplicationController
   before_action :check_user, except: [:index, :show]
 
   def index
-    @restaurants = Restaurant.all
+    @restaurants = Restaurant.all.order('created_at DESC').paginate(page: params[:page], per_page: 5)
   end
 
   def show
@@ -59,9 +59,9 @@ class RestaurantsController < ApplicationController
 
   def search
     if params[:search].present?
-      @restaurants = Restaurant.search(params[:search])
+      @restaurants = Restaurant.paginate(page: params[:page], per_page: 10).search(params[:search])
     else
-      @restaurants = Restaurant.all
+      @restaurants = Restaurant.all.paginate(page: params[:page], per_page: 10)
     end
   end
 
