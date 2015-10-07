@@ -16,6 +16,7 @@ gem 'figaro'
 gem 'mini_magick'
 gem 'devise'
 gem 'faker'
+gem 'searchkick'
 
 group :development, :test do
   gem 'byebug'
