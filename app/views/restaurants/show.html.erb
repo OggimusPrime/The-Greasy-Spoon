@@ -23,7 +23,25 @@
       <%= link_to @restaurant.website, @restaurant.website %>
     </p>
 
-    <%= link_to "Write Review", new_restaurant_review_path(@restaurant), class: "btn btn-primary" %>
+    <div class="btn-group" role="group">
+      <%= link_to "Write Review", new_restaurant_review_path(@restaurant), class: "btn btn-primary" %>
+      <%= link_to 'Back', restaurants_path, class: "btn btn-default" %>
+    </div>
+
+    <br>
+    <br>
+
+    <iframe
+      width="250"
+      height="250"
+      frameborder="0"
+      style="border:0" src="https://www.google.com/maps/embed/v1/place?key=<%= ENV['google_maps_api'] %>&q=<%= @restaurant.address.parameterize %>&zoom=14">
+    </iframe>
+
+    <% if user_signed_in? && current_user.admin? %>
+      <%= link_to 'Edit Restaurant', edit_restaurant_path(@restaurant), class: "btn btn-default" %>
+    <% end %>
+
   </div>
   <div class="col-md-9">
     <% if @reviews.blank? %>
@@ -62,9 +80,6 @@
     <% end %>
   </div>
 </div>
-<%= link_to 'Edit', edit_restaurant_path(@restaurant), class: "btn btn-link" %>
-|
-<%= link_to 'Back', restaurants_path, class: "btn btn-link" %>
 <script>
 $('.star-rating').raty({
   path: 'https://s3.amazonaws.com/the-greasy-spoon-production/Stars',
