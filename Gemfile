@@ -19,6 +19,8 @@ gem 'faker'
 gem 'searchkick'
 gem 'will_paginate', '~>3.0.6'
 gem 'will_paginate-bootstrap'
+gem 'puma'
+gem 'newrelic_rpm'
 
 group :development, :test do
   gem 'byebug'
