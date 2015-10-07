@@ -15,6 +15,7 @@ gem 'fog'
 gem 'figaro'
 gem 'mini_magick'
 gem 'devise'
+gem 'faker'
 
 group :development, :test do
   gem 'byebug'
