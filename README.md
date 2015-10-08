@@ -1,6 +1,6 @@
 ## The Greasy Spoon - a Restaurant and Eatery Review Site
 
-The Greasy Spoon is a local restaurant and eatery review site just like Yelp. Users can submit reviews and star ratings for their favorite or not so favorite dinning establishments.
+The Greasy Spoon is a local restaurant and eatery review site just like Yelp. Users can submit reviews and star ratings for their favorite or not so favorite dining establishments.
 
 https://the-greasy-spoon.herokuapp.com/
 
